@@ -1,0 +1,10 @@
+﻿<table>
+    <tr>
+        <td>
+            @Html.Action("GridOne")
+        </td>
+        <td>
+            @Html.Action("GridTwo")
+        </td>
+    </tr>
+</table>

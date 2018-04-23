@@ -1,0 +1,12 @@
+@Html.DevExpress().CallbackPanel(settings => {
+    settings.Name = "CallbackPanel";
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "CallbackPanelPartial" };
+
+    settings.Width = System.Web.UI.WebControls.Unit.Percentage(100);
+    
+    settings.SetContent(() => {
+        Html.RenderPartial("_Grids");
+    });
+
+    settings.ClientSideEvents.EndCallback = "OnPanelEndCallback";
+}).GetHtml()

@@ -1,0 +1,10 @@
+﻿@Html.DevExpress().GridView(settings=>{
+    settings.Name = "gridTwo";
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "GridTwo" };
+    settings.Width = 500;
+
+    settings.KeyFieldName = "CategoryID";
+    settings.Styles.Table.CssClass = "droppableRight";
+    settings.Styles.Row.CssClass = "draggableRow right";
+    
+}).Bind(Model).GetHtml()
