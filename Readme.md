@@ -1,3 +1,15 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [HomeController.cs](./CS/dragDropMvc/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/dragDropMvc/Controllers/HomeController.vb))
+* [GridModel.cs](./CS/dragDropMvc/Models/GridModel.cs) (VB: [GridModel.vb](./VB/dragDropMvc/Models/GridModel.vb))
+* [script.js](./CS/dragDropMvc/Scripts/script.js) (VB: [script.js](./VB/dragDropMvc/Scripts/script.js))
+* [_CallbackPanelPartial.cshtml](./CS/dragDropMvc/Views/Home/_CallbackPanelPartial.cshtml)
+* [_GridOne.cshtml](./CS/dragDropMvc/Views/Home/_GridOne.cshtml)
+* [_Grids.cshtml](./CS/dragDropMvc/Views/Home/_Grids.cshtml)
+* [_GridTwo.cshtml](./CS/dragDropMvc/Views/Home/_GridTwo.cshtml)
+* **[Index.cshtml](./CS/dragDropMvc/Views/Home/Index.cshtml)**
+<!-- default file list end -->
 # GridView - How to drag and drop items from one grid to another
 
 
