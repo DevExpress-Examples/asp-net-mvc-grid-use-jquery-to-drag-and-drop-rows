@@ -11,6 +11,9 @@
 * **[Index.cshtml](./CS/dragDropMvc/Views/Home/Index.cshtml)**
 <!-- default file list end -->
 # GridView - How to drag and drop items from one grid to another
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t116869)**
+<!-- run online end -->
 
 
 <p>The example demonstrates how to use the jQuery framework to drag an item from one grid to another.</p>
