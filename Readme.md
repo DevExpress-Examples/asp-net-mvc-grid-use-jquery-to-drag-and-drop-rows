@@ -12,7 +12,7 @@
 <!-- default file list end -->
 # GridView - How to drag and drop items from one grid to another
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t116869)**
+**[[Run Online]](https://codecentral.devexpress.com/t116869/)**
 <!-- run online end -->
 
 
