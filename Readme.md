@@ -1,63 +1,51 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128550008/13.2.9%2B)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T116869)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+# Grid View for ASP.NET MVC - How to use jQuery to drag and drop items from one grid to another
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/t116869/)**
+<!-- run online end -->
+
+This example demonstrates how to use the jQuery framework to drag rows between grids.
+
+![Drag and drop grid rows](DragAndDropGridRows.png)
+
+## Overview
+
+Create a callback panel and two grid controls. Use jQuery UI [Draggable](https://jqueryui.com/draggable) and [Droppable](https://jqueryui.com/droppable) plug-ins and define `draggable` and `droppable` items.
+
+```cshtml
+settings.Styles.Table.CssClass = "droppableRight";
+settings.Styles.Row.CssClass = "draggableRow right";
+```
+
+Handle the panel's client-side `EndCallback` event. In the handler, use the corresponding jQuery selectors to initialize the specifed `draggable` and `droppable` items. Use the `start` event handler to obtain the dragged row's key value and apply style settings to that row based on a condition.
+
+```js
+start: function (ev, ui) {
+    var $sourceElement = $(ui.helper.context);
+    var $draggingElement = $(ui.helper);
+    var sourceGrid = ASPxClientGridView.Cast($draggingElement.hasClass("left") ? "gridOne" : "gridTwo");
+
+    // Add styles
+    $sourceElement.addClass("draggingStyle");
+    $draggingElement.addClass("draggingStyle");
+    $draggingElement.width(sourceGrid.GetWidth());
+
+    // Find the row's key value
+    rowKey = sourceGrid.GetRowKey($sourceElement.index() - 1);
+}
+```
+
+Handle the `drop` event of the `droppable` items to send a callback to the callback panel to configure the grid's edit functionality.
+
+## Files to Review
 
 * [HomeController.cs](./CS/dragDropMvc/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/dragDropMvc/Controllers/HomeController.vb))
 * [GridModel.cs](./CS/dragDropMvc/Models/GridModel.cs) (VB: [GridModel.vb](./VB/dragDropMvc/Models/GridModel.vb))
 * [script.js](./CS/dragDropMvc/Scripts/script.js) (VB: [script.js](./VB/dragDropMvc/Scripts/script.js))
 * [_CallbackPanelPartial.cshtml](./CS/dragDropMvc/Views/Home/_CallbackPanelPartial.cshtml)
 * [_GridOne.cshtml](./CS/dragDropMvc/Views/Home/_GridOne.cshtml)
-* [_Grids.cshtml](./CS/dragDropMvc/Views/Home/_Grids.cshtml)
 * [_GridTwo.cshtml](./CS/dragDropMvc/Views/Home/_GridTwo.cshtml)
-* **[Index.cshtml](./CS/dragDropMvc/Views/Home/Index.cshtml)**
-<!-- default file list end -->
-# GridView - How to drag and drop items from one grid to another
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t116869/)**
-<!-- run online end -->
+* [Index.cshtml](./CS/dragDropMvc/Views/Home/Index.cshtml)
 
+## More Examples
 
-<p>The example demonstrates how to use the jQuery framework to drag an item from one grid to another.</p>
-<p>- Use jQuery UI <a href="http://jqueryui.com/draggable/">Draggable</a> and <a href="http://jqueryui.com/droppable/">Droppable</a> plug-ins;<br />- Define "draggable" and "droppable" items:</p>
-
-
-```cs
-settings.Styles.Table.CssClass = "droppableRight";
-settings.Styles.Row.CssClass = "draggableRow right";
-```
-
-
-<p>- Initialize the defined draggable/droppable items via the corresponding jQuery selectors. The "start" event handler can be used to obtain the key of the dragged row and apply conditional styling to it:</p>
-
-
-```js
-start: function (ev, ui) {
-    var $sourceElement = $(ui.helper.context);
-    var $draggingElement = $(ui.helper);
-
-    var sourceGrid = ASPxClientGridView.Cast($draggingElement.hasClass("left") ? "gridOne" : "gridTwo");
-
-    //style elements
-    $sourceElement.addClass("draggingStyle");
-    $draggingElement.addClass("draggingStyle");
-    $draggingElement.width(sourceGrid.GetWidth());
-
-
-    //find key
-    rowKey = sourceGrid.GetRowKey($sourceElement.index() - 1);
-},
-
-```
-
-
-<p>- Handle the "drop" event of the "droppable" items and perform a callback to the callback panel that has both grids nested inside to perform the data editing functionality.</p>
-<p>Select the "script.js" source file and review the comments to find an illustration of the above steps.</p>
-<br /><strong>See </strong><strong>A</strong><strong>lso:<br /> </strong><a href="https://www.devexpress.com/Support/Center/p/E1810">How to use jQuery to drag and drop items from one ASPxGridView to another</a>
-
-<br/>
-
-
+* [Grid View for ASP.NET Web Forms - How to use jQuery to drag and drop items from one grid to another](https://github.com/DevExpress-Examples/asp-net-web-forms-grid-use-jquery-to-drag-and-drop-rows)
