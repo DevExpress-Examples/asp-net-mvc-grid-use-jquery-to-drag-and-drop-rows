@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # Grid View for ASP.NET MVC - How to use jQuery to drag and drop items from one grid to another
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t116869/)**
+**[[Run Online]](https://codecentral.devexpress.com/128550008/)**
 <!-- run online end -->
 
 This example demonstrates how to use the jQuery framework to drag rows between grids.
