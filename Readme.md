@@ -3,7 +3,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/t116869/)**
 <!-- run online end -->
 
-This example demonstrates how to use the jQuery framework to drag rows from one grid to another.
+This example demonstrates how to use the jQuery framework to drag rows between grids.
 
 ![Drag and drop grid rows](DragAndDropGridRows.png)
 
