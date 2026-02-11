@@ -53,7 +53,7 @@ Handle the `drop` event of the `droppable` items to send a callback to the callb
 
 * [Grid View for ASP.NET Web Forms - How to use jQuery to drag and drop items from one grid to another](https://github.com/DevExpress-Examples/asp-net-web-forms-grid-use-jquery-to-drag-and-drop-rows)
 <!-- feedback -->
-## Does This Example Address Your Development Requirements/Objectives?
+## Does this example address your development requirements/objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-mvc-grid-use-jquery-to-drag-and-drop-rows&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-mvc-grid-use-jquery-to-drag-and-drop-rows&~~~was_helpful=no)
 
